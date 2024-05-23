@@ -17,14 +17,14 @@ class _LoginpageState extends State<Loginpage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.yellow[100],
+      backgroundColor: Colors.blue[70],
       body: Column(
         children: [
           Padding(
             padding: const EdgeInsets.only(top: 15, left: 150, right: 120),
             child: Text(
               "Login page",
-              style: TextStyle(color: Colors.green, fontSize: 30),
+              style: TextStyle(color: Colors.blue[900], fontSize: 30),
             ),
           ),
           Padding(
@@ -72,7 +72,7 @@ class _LoginpageState extends State<Loginpage> {
           ),
           ElevatedButton(
               style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.green,
+                  backgroundColor: Colors.blue[800],
                   foregroundColor: Colors.black,
                   maximumSize: Size(200, 60),
                   shape: RoundedRectangleBorder(
@@ -86,7 +86,7 @@ class _LoginpageState extends State<Loginpage> {
             onPressed: () {},
             child: Text(
               "Not a user ? Create an account ",
-              style: TextStyle(color: Colors.green),
+              style: TextStyle(color: Colors.blue[900]),
             ),
           )
         ],
