@@ -32,34 +32,48 @@ class Citiesaroundworld extends StatelessWidget {
       ),
       body: ListView.builder(
           itemBuilder: (context, index) {
-            return Padding(
-              padding: const EdgeInsets.only(left: 20, right: 20),
-              child: Padding(
-                padding: const EdgeInsets.only(top: 20),
-                child: Card(
+            return Column(
+              children: [
+                Card(margin: EdgeInsets.symmetric(vertical: 20,horizontal: 16),
                   color: Colors.orangeAccent,
                   child: ListTile(
-                      leading: Image(
-                        image: AssetImage(image[index]),
-                        width: 100,
-                        fit: BoxFit.cover,
-                      ),
-                      title: Text(
-                        cityname[index],
-                        style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),
-                      ),
-                      subtitle: Text.rich(
-                          TextSpan(
+                      title : Row(
+                        children: [
+                          SizedBox(
+                            height: 150,
+                            width: 150,
+
+                            child: Image(
+                              image: AssetImage(image[index]),
+                              fit: BoxFit.fill,
+
+
+                            ),
+                          ),
+                          SizedBox(width: 20,),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              TextSpan(text: countryname[index],style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600)),
-                              TextSpan(text: "\n"),
-                              TextSpan(text: population[index])
+                              Text(
+                                cityname[index],
+                                style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold),
+                              ),
+                              SizedBox(height: 20,),
+                              Text(countryname[index],
+                                style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
+                              ),
+                              Text(population[index],)
                             ],
                           ),
+
+                        ],
                       ),
+
+
+
                   ),
                 ),
-              ),
+              ],
             );
           },
           itemCount: cityname.length),

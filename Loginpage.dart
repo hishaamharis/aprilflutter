@@ -1,4 +1,5 @@
 
+import 'package:aprilflutter/Regpage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -78,7 +79,10 @@ class Loginpage extends StatelessWidget {
               height: 50,
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context)=>Regpage()));
+              },
               child: Text(
                 "Not a user ? Create an account ",
                 style: TextStyle(color: Colors.green),
