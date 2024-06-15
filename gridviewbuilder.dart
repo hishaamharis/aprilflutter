@@ -27,7 +27,7 @@ class Gridviewbuilder extends StatelessWidget {
     return Scaffold(backgroundColor: Colors.blue[100],
       body: GridView.builder(
           gridDelegate:
-              SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+              SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3,mainAxisSpacing: 2),
           itemCount: name.length,
           itemBuilder: (context, index) {
             return Card(color: colors[index],
