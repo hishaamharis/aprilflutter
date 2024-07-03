@@ -15,7 +15,7 @@ class Gridvieweg extends StatelessWidget {
         Card(
         child: Column(mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.ac_unit)
+            Icon(Icons.ac_unit),
           ],
         ),
       ),
